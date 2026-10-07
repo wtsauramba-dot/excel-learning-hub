@@ -43,10 +43,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div>
               <span className="text-xl font-extrabold text-indigo-950 tracking-tight font-poppins block leading-none">
-                Bright Minds
-              </span>
-              <span className="text-[11px] font-semibold text-amber-600 tracking-wider uppercase block mt-1">
-                Learning
+                Excel Learning Hub
               </span>
             </div>
           </Link>

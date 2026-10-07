@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { X, Plus, Image as ImageIcon, Sparkles, BookOpen } from 'lucide-react';
 import { useCourseStore } from '../store/courseStore';
 import { useAuthStore } from '../store/authStore';
@@ -78,7 +78,7 @@ export const AddCourseModal: React.FC<AddCourseModalProps> = ({ isOpen, onClose 
             </div>
             <div>
               <h3 className="text-xl font-bold text-indigo-950">Create New Course</h3>
-              <p className="text-xs text-slate-500">Publish a new curriculum to Bright Minds students</p>
+              <p className="text-xs text-slate-500">Publish a new curriculum to Excel Learning Hub students</p>
             </div>
           </div>
           <button

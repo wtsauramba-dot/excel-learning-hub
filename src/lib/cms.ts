@@ -1,7 +1,7 @@
-/**
+﻿/**
  * Headless CMS Adapter & Integration Layer
  * 
- * Bright Minds Learning Front-End Architecture
+ * Excel Learning Hub Front-End Architecture
  * This module provides clean abstraction functions for fetching courses, tutors,
  * and user profiles from headless CMS platforms (Directus, Strapi v4/v5, Sanity.io).
  * 
@@ -43,7 +43,7 @@ export async function fetchCoursesFromCMS(): Promise<Course[]> {
         mode: item.mode,
         price: Number(item.price),
         tutorId: String(item.tutor?.id || item.tutor_id || ''),
-        tutorName: item.tutor?.name || item.tutor_name || 'Bright Minds Instructor',
+        tutorName: item.tutor?.name || item.tutor_name || 'Excel Learning Hub Instructor',
         tutorAvatar: item.tutor?.photo ? `${DIRECTUS_URL}/assets/${item.tutor.photo}` : item.tutor_avatar,
         rating: Number(item.rating || 4.9),
         reviewsCount: Number(item.reviews_count || item.reviewsCount || 10),
@@ -84,7 +84,7 @@ export async function fetchCoursesFromCMS(): Promise<Course[]> {
       mode: item.attributes.mode,
       price: item.attributes.price,
       tutorId: String(item.attributes.tutor?.data?.id || ''),
-      tutorName: item.attributes.tutor?.data?.attributes?.name || 'Bright Minds Instructor',
+      tutorName: item.attributes.tutor?.data?.attributes?.name || 'Excel Learning Hub Instructor',
       tutorAvatar: item.attributes.tutor?.data?.attributes?.avatar?.data?.attributes?.url,
       rating: item.attributes.rating || 4.9,
       reviewsCount: item.attributes.reviewsCount || 10,

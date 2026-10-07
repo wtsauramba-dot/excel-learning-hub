@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+﻿import { create } from 'zustand';
 import { Course } from '../types';
 import { mockCourses } from '../data/courses';
 
@@ -31,8 +31,8 @@ const defaultAvailability: Record<string, number[]> = {
   'Sun': []
 };
 
-const COURSES_STORAGE_KEY = 'brightminds_courses';
-const ENROLLED_STORAGE_KEY = 'brightminds_enrolled';
+const COURSES_STORAGE_KEY = 'excellearninghub_courses';
+const ENROLLED_STORAGE_KEY = 'excellearninghub_enrolled';
 
 const getInitialCourses = (): Course[] => {
   try {

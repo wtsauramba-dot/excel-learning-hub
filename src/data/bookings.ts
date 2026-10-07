@@ -1,4 +1,4 @@
-import { Booking, LearningResource, MonthlyEarning } from '../types';
+﻿import { Booking, LearningResource, MonthlyEarning } from '../types';
 
 export const mockBookings: Booking[] = [
   {
@@ -12,7 +12,7 @@ export const mockBookings: Booking[] = [
     date: 'Tomorrow, 3:00 PM',
     time: '45 mins',
     status: 'Upcoming',
-    meetingUrl: 'https://zoom.us/j/demo-brightminds-123',
+    meetingUrl: 'https://zoom.us/j/demo-excellearninghub-123',
     mode: '1-on-1 Live'
   },
   {
@@ -26,7 +26,7 @@ export const mockBookings: Booking[] = [
     date: 'Friday, 5:30 PM',
     time: '60 mins',
     status: 'Upcoming',
-    meetingUrl: 'https://zoom.us/j/demo-brightminds-456',
+    meetingUrl: 'https://zoom.us/j/demo-excellearninghub-456',
     mode: '1-on-1 Live'
   },
   {
@@ -40,7 +40,7 @@ export const mockBookings: Booking[] = [
     date: 'Saturday, 10:00 AM',
     time: '60 mins',
     status: 'Upcoming',
-    meetingUrl: 'https://zoom.us/j/demo-brightminds-789',
+    meetingUrl: 'https://zoom.us/j/demo-excellearninghub-789',
     mode: '1-on-1 Live'
   },
   {
@@ -54,7 +54,7 @@ export const mockBookings: Booking[] = [
     date: 'Monday, 4:00 PM',
     time: '45 mins',
     status: 'Upcoming',
-    meetingUrl: 'https://zoom.us/j/demo-brightminds-101',
+    meetingUrl: 'https://zoom.us/j/demo-excellearninghub-101',
     mode: '1-on-1 Live'
   }
 ];

@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -16,7 +16,7 @@
   }
 }
 
-/* Custom Utilities for Bright Minds Brand */
+/* Custom Utilities for Excel Learning Hub Brand */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 via-indigo-700 to-amber-500;
 }

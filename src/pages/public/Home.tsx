@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -52,7 +52,7 @@ export const Home: React.FC = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] font-poppins">
                 Learn Smarter with <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-orange-400">
-                  Bright Minds
+                  Excel Learning Hub
                 </span>
               </h1>
 
@@ -102,7 +102,7 @@ export const Home: React.FC = () => {
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900">
                   <img
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
-                    alt="Bright Minds Interactive Learning"
+                    alt="Excel Learning Hub Interactive Learning"
                     className="w-full h-full object-cover opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-indigo-950 via-transparent to-transparent"></div>
@@ -161,7 +161,7 @@ export const Home: React.FC = () => {
             Simple 3-Step Journey
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-950 mt-3 font-poppins">
-            How Bright Minds Works
+            How Excel Learning Hub Works
           </h2>
           <p className="text-slate-600 text-base mt-2">
             Start expanding your knowledge in under 2 minutes with flexible, tailored learning paths.
@@ -217,7 +217,7 @@ export const Home: React.FC = () => {
               Two Powerful Ways to Learn
             </h2>
             <p className="text-indigo-200 text-base mt-2">
-              Whether you need live personal guidance or self-paced video lessons, Bright Minds provides both.
+              Whether you need live personal guidance or self-paced video lessons, Excel Learning Hub provides both.
             </p>
           </div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { GraduationCap } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false,
-  message = 'Loading Bright Minds...'
+  message = 'Loading Excel Learning Hub...'
 }) => {
   const content = (
     <div className="flex flex-col items-center justify-center p-8 text-center">

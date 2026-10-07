@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { GraduationCap, Mail, Phone, MapPin, Heart, Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 
@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
                 <GraduationCap className="h-6 w-6" />
               </div>
               <span className="text-xl font-bold text-white tracking-tight font-poppins">
-                Bright Minds Learning
+                Excel Learning Hub
               </span>
             </Link>
             <p className="text-sm text-indigo-200/80 leading-relaxed max-w-sm">
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
-                <span>support@brightminds.edu</span>
+                <span>support@excellearninghub.edu</span>
               </li>
             </ul>
           </div>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Line */}
         <div className="border-t border-indigo-900/80 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-indigo-300/60 gap-4">
-          <p>© 2026 Bright Minds Learning Platform. All rights reserved.</p>
+          <p>© 2026 Excel Learning Hub Platform. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Service</a>

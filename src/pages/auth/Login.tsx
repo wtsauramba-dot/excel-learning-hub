@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { GraduationCap, LogIn, Sparkles, User, UserCheck } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
@@ -37,7 +37,7 @@ export const Login: React.FC = () => {
             Welcome Back
           </h2>
           <p className="text-xs text-slate-500">
-            Sign in to access your Bright Minds learning portal
+            Sign in to access your Excel Learning Hub portal
           </p>
         </div>
 

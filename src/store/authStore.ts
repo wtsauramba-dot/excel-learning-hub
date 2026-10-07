@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+﻿import { create } from 'zustand';
 import { User, UserRole } from '../types';
 import { mockUsers } from '../data/users';
 
@@ -14,7 +14,7 @@ interface AuthState {
   updateUser: (updates: Partial<User>) => void;
 }
 
-const STORAGE_KEY = 'brightminds_auth_user';
+const STORAGE_KEY = 'excellearninghub_auth_user';
 
 const getInitialUser = (): User | null => {
   try {

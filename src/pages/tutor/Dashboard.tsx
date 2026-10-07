@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -33,7 +33,7 @@ export const TutorDashboard: React.FC = () => {
           <div className="space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-bold">
               <BadgeCheck className="h-4 w-4 text-amber-400" />
-              <span>Verified Bright Minds Faculty</span>
+              <span>Verified Excel Learning Hub Faculty</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white font-poppins">
               Welcome Back, {user?.name || 'Dr. Marcus Vance'}! 👨‍🏫

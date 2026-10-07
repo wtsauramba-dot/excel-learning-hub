@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { FileText, Download, CheckCircle, Lock, ShieldCheck } from 'lucide-react';
 import { mockResources } from '../../data/bookings';
 import { useAuthStore } from '../../store/authStore';
@@ -29,7 +29,7 @@ export const Resources: React.FC = () => {
 
       <ProtectedContent
         fallbackTitle="🔒 Study Resources Locked"
-        fallbackDescription="Subscribe to Bright Minds Premium to download unlimited PDF formula sheets, practice worksheets, and exam keys."
+        fallbackDescription="Subscribe to Excel Learning Hub Premium to download unlimited PDF formula sheets, practice worksheets, and exam keys."
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mockResources.map((res) => (

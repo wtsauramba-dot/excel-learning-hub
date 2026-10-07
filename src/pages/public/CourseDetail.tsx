@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   Star, 
@@ -226,7 +226,7 @@ export const CourseDetail: React.FC = () => {
                           // Gated Subscriber Lesson
                           <ProtectedContent
                             fallbackTitle="🔒 Lesson Resources Locked"
-                            fallbackDescription="Join Bright Minds Premium to watch this full HD lesson & download study worksheets."
+                            fallbackDescription="Join Excel Learning Hub Premium to watch this full HD lesson & download study worksheets."
                           >
                             <div className="flex items-center gap-2">
                               <button

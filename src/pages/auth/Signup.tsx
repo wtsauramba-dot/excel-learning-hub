@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { GraduationCap, UserCheck, BookOpen, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
@@ -41,7 +41,7 @@ export const Signup: React.FC = () => {
             <GraduationCap className="h-7 w-7" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-indigo-950 font-poppins">
-            Join Bright Minds Learning
+            Join Excel Learning Hub
           </h2>
           <p className="text-xs sm:text-sm text-slate-500">
             {step === 1 ? 'Step 1: Choose your account type to get started' : `Step 2: Enter details for your ${role === 'student' ? 'Learner' : 'Tutor'} account`}

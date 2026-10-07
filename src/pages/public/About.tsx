@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { GraduationCap, Award, ShieldCheck, Heart, Sparkles, Users, BookOpen } from 'lucide-react';
 import { mockTutors } from '../../data/tutors';
@@ -17,7 +17,7 @@ export const About: React.FC = () => {
             Empowering Every Student to Reach Their Full Potential
           </h1>
           <p className="text-base sm:text-lg text-indigo-100/90 leading-relaxed max-w-2xl mx-auto">
-            Bright Minds Learning was founded on a single core belief: personalized, high-quality education should be engaging, accessible, and inspiring for every learner worldwide.
+            Excel Learning Hub was founded on a single core belief: personalized, high-quality education should be engaging, accessible, and inspiring for every learner worldwide.
           </p>
         </div>
       </section>

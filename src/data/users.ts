@@ -1,4 +1,4 @@
-import { User } from '../types';
+﻿import { User } from '../types';
 
 export const mockUsers: Record<string, User> = {
   'student@demo.com': {
@@ -20,6 +20,6 @@ export const mockUsers: Record<string, User> = {
     isSubscribed: true,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
     planName: 'Verified Educator Pro',
-    bio: 'Ph.D. in Applied Mathematics. Lead Tutor at Bright Minds.'
+    bio: 'Ph.D. in Applied Mathematics. Lead Tutor at Excel Learning Hub.'
   }
 };
