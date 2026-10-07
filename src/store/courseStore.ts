@@ -1,4 +1,4 @@
-﻿import { create } from 'zustand';
+import { create } from 'zustand';
 import { Course } from '../types';
 import { mockCourses } from '../data/courses';
 

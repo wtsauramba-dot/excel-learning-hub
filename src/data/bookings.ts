@@ -1,4 +1,4 @@
-﻿import { Booking, LearningResource, MonthlyEarning } from '../types';
+import { Booking, LearningResource, MonthlyEarning } from '../types';
 
 export const mockBookings: Booking[] = [
   {

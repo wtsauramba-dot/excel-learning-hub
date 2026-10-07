@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Headless CMS Adapter & Integration Layer
  * 
  * Excel Learning Hub Front-End Architecture

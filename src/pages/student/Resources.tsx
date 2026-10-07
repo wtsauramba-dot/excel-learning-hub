@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { FileText, Download, CheckCircle, Lock, ShieldCheck } from 'lucide-react';
 import { mockResources } from '../../data/bookings';
 import { useAuthStore } from '../../store/authStore';
