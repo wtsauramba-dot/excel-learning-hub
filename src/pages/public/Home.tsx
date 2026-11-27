@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+
 import { 
   Sparkles, 
   ArrowRight, 
@@ -10,22 +10,19 @@ import {
   Star, 
   BookOpen, 
   Award, 
-  ShieldCheck,
-  Search,
-  PlayCircle
+  PlayCircle,
+  Lightbulb,
+  Target,
+  Globe
 } from 'lucide-react';
-import { CourseCard } from '../../components/CourseCard';
 import { TutorCard } from '../../components/TutorCard';
-import { mockCourses } from '../../data/courses';
 import { mockTutors } from '../../data/tutors';
 import { Tutor } from '../../types';
+import { PORTAL_SIGNUP_URL } from '../../lib/portal';
 
 export const Home: React.FC = () => {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [bookedTutorModal, setBookedTutorModal] = useState<Tutor | null>(null);
 
-  const featuredCourses = mockCourses.slice(0, 6);
   const featuredTutors = mockTutors.slice(0, 4);
 
   const handleBookTutor = (tutor: Tutor) => {
@@ -62,21 +59,21 @@ export const Home: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                <Link
-                  to="/courses"
+                <a
+                  href="#concept"
                   className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-amber-500 hover:bg-amber-400 text-indigo-950 font-extrabold text-base shadow-xl shadow-amber-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
                 >
                   <BookOpen className="h-5 w-5" />
-                  Browse All Courses
+                  Discover the Concept
                   <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  to="/signup"
+                </a>
+                <a
+                  href={PORTAL_SIGNUP_URL}
                   className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 backdrop-blur-md flex items-center justify-center gap-2 transition-all"
                 >
                   <Sparkles className="h-5 w-5 text-amber-400" />
                   Sign Up Free
-                </Link>
+                </a>
               </div>
 
               {/* Social Proof Pills */}
@@ -109,12 +106,13 @@ export const Home: React.FC = () => {
                   
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Link
-                      to="/courses/course-1"
+                    <a
+                      href="#concept"
+                      aria-label="Discover the Excel Learning Hub concept"
                       className="h-16 w-16 rounded-full bg-amber-500/90 text-indigo-950 flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group"
                     >
                       <PlayCircle className="h-10 w-10 fill-indigo-950 text-amber-400 ml-0.5" />
-                    </Link>
+                    </a>
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 bg-indigo-950/90 backdrop-blur-md rounded-xl p-3 border border-white/10 flex items-center justify-between">
@@ -177,7 +175,7 @@ export const Home: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-indigo-950 mb-2">Create Your Account</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Sign up as a student or tutor in seconds. Choose your learning objectives and skill level.
+              Sign up on our learning portal as a student or tutor in seconds. Choose your learning objectives and skill level.
             </p>
           </div>
 
@@ -186,9 +184,9 @@ export const Home: React.FC = () => {
             <div className="h-16 w-16 rounded-2xl bg-amber-500 text-indigo-950 flex items-center justify-center text-2xl font-black mb-6 shadow-md shadow-amber-500/20">
               2
             </div>
-            <h3 className="text-xl font-bold text-indigo-950 mb-2">Select Course or Tutor</h3>
+            <h3 className="text-xl font-bold text-indigo-950 mb-2">Choose How You Learn</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Browse our catalog of 1-on-1 live interactive sessions or instant access pre-recorded video modules.
+              Choose 1-on-1 live interactive sessions with a tutor or instant-access pre-recorded video modules.
             </p>
           </div>
 
@@ -254,13 +252,13 @@ export const Home: React.FC = () => {
                 </ul>
               </div>
 
-              <Link
-                to="/courses?mode=Live"
+              <a
+                href={PORTAL_SIGNUP_URL}
                 className="w-full py-3 px-5 rounded-xl bg-amber-500 hover:bg-amber-400 text-indigo-950 font-bold text-sm text-center transition-colors flex items-center justify-center gap-2"
               >
                 <Calendar className="h-4 w-4" />
                 Book a Live Session
-              </Link>
+              </a>
             </div>
 
             {/* Mode 2 Card */}
@@ -294,43 +292,78 @@ export const Home: React.FC = () => {
                 </ul>
               </div>
 
-              <Link
-                to="/courses?mode=Recorded"
+              <a
+                href={PORTAL_SIGNUP_URL}
                 className="w-full py-3 px-5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm text-center border border-white/20 transition-colors flex items-center justify-center gap-2"
               >
                 <Video className="h-4 w-4 text-amber-400" />
                 Watch Tutorials Anytime
-              </Link>
+              </a>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* FEATURED COURSES CAROUSEL / GRID */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-          <div>
-            <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest bg-indigo-100/70 px-3.5 py-1.5 rounded-full">
-              Handpicked Catalog
-            </span>
-            <h2 className="text-3xl font-extrabold text-indigo-950 mt-3 font-poppins">
-              Featured Demo Courses
-            </h2>
-          </div>
-          <Link
-            to="/courses"
-            className="inline-flex items-center gap-2 text-sm font-bold text-indigo-900 hover:text-indigo-700 group"
-          >
-            Explore All 12 Courses
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+      {/* THE CONCEPT SECTION */}
+      <section id="concept" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest bg-indigo-100/70 px-3.5 py-1.5 rounded-full">
+            The Concept
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-950 mt-3 font-poppins">
+            What Is Excel Learning Hub?
+          </h2>
+          <p className="text-slate-600 text-base mt-3 leading-relaxed">
+            Excel Learning Hub brings expert tutors and learners together in one place. We combine the personal
+            attention of live 1-on-1 teaching with the freedom of self-paced video lessons, so every learner can
+            get the support they need, at the pace that suits them.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm">
+            <div className="h-12 w-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-5">
+              <Lightbulb className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-bold text-indigo-950 mb-2">Learning That Fits You</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              No two learners are the same. Book live time with a tutor when you need guidance, and revisit
+              recorded lessons whenever you want to revise.
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm">
+            <div className="h-12 w-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-5">
+              <Target className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-bold text-indigo-950 mb-2">Results-Focused Teaching</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Our tutors focus on understanding, not memorising. Practice material, notes and feedback help
+              learners build confidence and perform at their best.
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm">
+            <div className="h-12 w-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5">
+              <Globe className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-bold text-indigo-950 mb-2">One Portal, Anywhere</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Everything happens in our learning portal: lessons, live sessions, resources and progress
+              tracking, available on any device.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href={PORTAL_SIGNUP_URL}
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-indigo-900 hover:bg-indigo-800 text-white font-bold text-sm shadow-md transition-colors"
+          >
+            Join the Learning Portal
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </section>
 
@@ -445,7 +478,7 @@ export const Home: React.FC = () => {
               <button
                 onClick={() => {
                   setBookedTutorModal(null);
-                  navigate('/signup');
+                  window.location.href = PORTAL_SIGNUP_URL;
                 }}
                 className="w-full py-3 rounded-xl bg-amber-500 text-indigo-950 font-bold text-xs shadow hover:bg-amber-400"
               >

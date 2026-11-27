@@ -15,6 +15,7 @@ import {
   Zap
 } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
+import { PORTAL_LOGIN_URL, PORTAL_SIGNUP_URL } from '../lib/portal';
 
 export const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -163,19 +164,19 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center gap-3">
             {!isAuthenticated ? (
               <>
-                <Link
-                  to="/login"
+                <a
+                  href={PORTAL_LOGIN_URL}
                   className="px-5 py-2.5 rounded-xl text-sm font-semibold text-indigo-900 hover:bg-indigo-50 transition-colors"
                 >
                   Log In
-                </Link>
-                <Link
-                  to="/signup"
+                </a>
+                <a
+                  href={PORTAL_SIGNUP_URL}
                   className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-amber-500 text-indigo-950 hover:bg-amber-400 transition-colors shadow-md shadow-amber-500/20 flex items-center gap-2"
                 >
                   <Sparkles className="h-4 w-4" />
                   Sign Up
-                </Link>
+                </a>
               </>
             ) : (
               <div className="relative">
@@ -300,20 +301,20 @@ export const Navbar: React.FC = () => {
                 Pricing
               </Link>
               <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
-                <Link
-                  to="/login"
+                <a
+                  href={PORTAL_LOGIN_URL}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="w-full text-center py-2.5 rounded-xl font-semibold border border-indigo-900/20 text-indigo-900"
                 >
                   Log In
-                </Link>
-                <Link
-                  to="/signup"
+                </a>
+                <a
+                  href={PORTAL_SIGNUP_URL}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="w-full text-center py-2.5 rounded-xl font-semibold bg-amber-500 text-indigo-950 shadow"
                 >
                   Sign Up
-                </Link>
+                </a>
               </div>
             </>
           ) : user?.role === 'student' ? (
