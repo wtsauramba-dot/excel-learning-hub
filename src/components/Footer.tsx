@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GraduationCap, Mail, Phone, MapPin, Heart, Github, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { GraduationCap, Mail, Phone, Heart, Github, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -65,17 +65,13 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider">Contact Us</h4>
             <ul className="space-y-2.5 text-sm text-indigo-200/70">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>100 Education Plaza, Cambridge, MA 02138</span>
-              </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-amber-400 shrink-0" />
-                <span>+1 (800) 555-BRIGHT</span>
+                <a href="tel:+27842287589" className="hover:text-amber-400 transition-colors">+27 84 228 7589</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
-                <span>support@excellearninghub.edu</span>
+                <a href="mailto:admin@excel-learninghub.com" className="hover:text-amber-400 transition-colors">admin@excel-learninghub.com</a>
               </li>
             </ul>
           </div>

@@ -13,9 +13,9 @@ import { CourseDetail } from '../pages/public/CourseDetail';
 import { About } from '../pages/public/About';
 import { Pricing } from '../pages/public/Pricing';
 
-// Auth pages
-import { Login } from '../pages/auth/Login';
-import { Signup } from '../pages/auth/Signup';
+// Auth lives on the learning portal
+import { ExternalRedirect } from '../components/ExternalRedirect';
+import { PORTAL_LOGIN_URL, PORTAL_SIGNUP_URL } from '../lib/portal';
 
 // Student pages
 import { StudentDashboard } from '../pages/student/Dashboard';
@@ -44,9 +44,9 @@ export const AppRoutes: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
 
-          {/* AUTH ROUTES */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          {/* AUTH ROUTES: redirect to the learning portal */}
+          <Route path="/login" element={<ExternalRedirect to={PORTAL_LOGIN_URL} />} />
+          <Route path="/signup" element={<ExternalRedirect to={PORTAL_SIGNUP_URL} />} />
         </Route>
 
         {/* STUDENT PROTECTED ROUTES */}
