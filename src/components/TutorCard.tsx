@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Star, Award, BookOpen, Calendar, ArrowRight } from 'lucide-react';
+import { Star, Award, Calendar } from 'lucide-react';
 import { Tutor } from '../types';
 
 interface TutorCardProps {
@@ -49,25 +48,15 @@ export const TutorCard: React.FC<TutorCardProps> = ({ tutor, onBookClick }) => {
         </p>
 
         {/* Stats Row */}
-        <div className="mt-auto grid grid-cols-2 gap-2 py-3 border-y border-slate-100 mb-4 text-xs">
+        <div className="mt-auto py-3 border-y border-slate-100 mb-4 text-xs">
           <div className="flex items-center gap-2 text-slate-600">
             <Award className="h-4 w-4 text-amber-500 shrink-0" />
             <span className="truncate">{tutor.totalStudents}+ Students</span>
-          </div>
-          <div className="flex items-center gap-2 text-slate-600">
-            <BookOpen className="h-4 w-4 text-indigo-600 shrink-0" />
-            <span>{tutor.coursesCount} Courses</span>
           </div>
         </div>
 
         {/* CTAs */}
         <div className="flex gap-2">
-          <Link
-            to={`/courses?tutor=${encodeURIComponent(tutor.name)}`}
-            className="flex-1 py-2.5 px-3 rounded-xl bg-indigo-50 text-indigo-900 font-semibold text-xs hover:bg-indigo-100 transition-colors text-center"
-          >
-            View Courses
-          </Link>
           <button
             onClick={() => onBookClick ? onBookClick(tutor) : null}
             className="flex-1 py-2.5 px-3 rounded-xl bg-amber-500 text-indigo-950 font-bold text-xs hover:bg-amber-400 transition-colors flex items-center justify-center gap-1 shadow-sm"
