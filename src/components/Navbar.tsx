@@ -63,14 +63,6 @@ export const Navbar: React.FC = () => {
                   Home
                 </Link>
                 <Link
-                  to="/courses"
-                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
-                    isActive('/courses') ? 'bg-indigo-50 text-indigo-900 font-semibold' : 'text-slate-600 hover:text-indigo-900 hover:bg-slate-50'
-                  }`}
-                >
-                  Courses
-                </Link>
-                <Link
                   to="/about"
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
                     isActive('/about') ? 'bg-indigo-50 text-indigo-900 font-semibold' : 'text-slate-600 hover:text-indigo-900 hover:bg-slate-50'
@@ -98,14 +90,6 @@ export const Navbar: React.FC = () => {
                 >
                   <LayoutDashboard className="h-4 w-4" />
                   Dashboard
-                </Link>
-                <Link
-                  to="/courses"
-                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-colors ${
-                    isActive('/courses') ? 'bg-indigo-50 text-indigo-900 font-semibold' : 'text-slate-600 hover:text-indigo-900 hover:bg-slate-50'
-                  }`}
-                >
-                  Browse Courses
                 </Link>
                 <Link
                   to="/student/my-courses"
@@ -280,13 +264,6 @@ export const Navbar: React.FC = () => {
                 Home
               </Link>
               <Link
-                to="/courses"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50"
-              >
-                Courses
-              </Link>
-              <Link
                 to="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50"
@@ -325,13 +302,6 @@ export const Navbar: React.FC = () => {
                 className="block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50"
               >
                 Dashboard
-              </Link>
-              <Link
-                to="/courses"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50"
-              >
-                Browse Courses
               </Link>
               <Link
                 to="/student/my-courses"

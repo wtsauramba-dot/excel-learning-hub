@@ -8,8 +8,6 @@ import { LoadingSpinner } from '../components/LoadingSpinner';
 
 // Public pages
 import { Home } from '../pages/public/Home';
-import { Courses } from '../pages/public/Courses';
-import { CourseDetail } from '../pages/public/CourseDetail';
 import { About } from '../pages/public/About';
 import { Pricing } from '../pages/public/Pricing';
 
@@ -39,8 +37,8 @@ export const AppRoutes: React.FC = () => {
         {/* PUBLIC ROUTES */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:id" element={<CourseDetail />} />
+          {/* Course pages were removed; send old links home */}
+          <Route path="/courses/*" element={<Navigate to="/" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
 

@@ -274,7 +274,7 @@ export const Home: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Pre-recorded Video Tutorials</h3>
                 <p className="text-sm text-indigo-100/80 leading-relaxed mb-6">
-                  Watch structured, HD video courses anytime, anywhere. Pause, rewind, and re-watch complex explanations alongside downloadable cheat sheets and practice worksheets.
+                  Watch structured, HD video lessons anytime, anywhere. Pause, rewind, and re-watch complex explanations alongside downloadable cheat sheets and practice worksheets.
                 </p>
                 <ul className="space-y-2.5 text-xs text-indigo-200 mb-8">
                   <li className="flex items-center gap-2">
@@ -424,7 +424,7 @@ export const Home: React.FC = () => {
                 ))}
               </div>
               <p className="text-xs text-slate-700 leading-relaxed italic">
-                "The pre-recorded Python course was so structured! Being able to download worksheet answer keys saved me tons of time."
+                "The pre-recorded Python lessons were so structured! Being able to download worksheet answer keys saved me tons of time."
               </p>
               <div className="pt-2 border-t border-slate-200/60 flex items-center gap-3">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100" alt="Avatar" className="h-8 w-8 rounded-full object-cover" />

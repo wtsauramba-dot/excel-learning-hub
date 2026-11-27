@@ -69,7 +69,7 @@ export const Pricing: React.FC = () => {
         <div className="rounded-3xl bg-white border border-slate-200/80 p-8 shadow-sm flex flex-col justify-between space-y-6">
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-slate-900">Basic Learner</h3>
-            <p className="text-xs text-slate-500">Perfect for exploring single courses and sample previews.</p>
+            <p className="text-xs text-slate-500">Perfect for exploring and sampling our lessons.</p>
             <div className="flex items-baseline gap-1">
               <span className="text-4xl font-black text-slate-900">$0</span>
               <span className="text-xs text-slate-400">/ forever free</span>
@@ -77,11 +77,11 @@ export const Pricing: React.FC = () => {
             <ul className="space-y-3 pt-4 border-t border-slate-100 text-xs text-slate-600">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                <span>Access to all course syllabus previews</span>
+                <span>Access to lesson syllabus previews</span>
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-emerald-500 shrink-0" />
-                <span>Free sample video lesson per course</span>
+                <span>Free sample video lessons</span>
               </li>
               <li className="flex items-center gap-2 text-slate-400 line-through">
                 <span>1-on-1 Live lesson booking discount</span>
@@ -110,7 +110,7 @@ export const Pricing: React.FC = () => {
 
           <div className="space-y-4 pt-2">
             <h3 className="text-xl font-bold text-white">Premium All-Access Pass</h3>
-            <p className="text-xs text-indigo-200">Full unlimited access to all courses, videos, and study guides.</p>
+            <p className="text-xs text-indigo-200">Full unlimited access to all lessons, videos, and study guides.</p>
             <div className="flex items-baseline gap-1">
               <span className="text-5xl font-black text-amber-400">
                 {billingCycle === 'monthly' ? '$29' : '$23'}
@@ -120,7 +120,7 @@ export const Pricing: React.FC = () => {
             <ul className="space-y-3 pt-4 border-t border-indigo-800/80 text-xs text-indigo-100">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-amber-400 shrink-0" />
-                <span><strong>Unlimited access</strong> to all 12+ pre-recorded video courses</span>
+                <span><strong>Unlimited access</strong> to all pre-recorded video lessons</span>
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-amber-400 shrink-0" />
@@ -132,7 +132,7 @@ export const Pricing: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-amber-400 shrink-0" />
-                <span>Verified course completion certificates</span>
+                <span>Verified completion certificates</span>
               </li>
             </ul>
           </div>
